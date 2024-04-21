@@ -9,9 +9,9 @@ import nanoCopy from "nano-copy";
 import { clone as ramdaClone } from "ramda";
 import { Bench } from "tinybench";
 import { bidRequest } from "./bidRequest.js";
+import assert from "node:assert";
 
 const bench = new Bench({ time: 1000, iterations: 100 });
-
 bench
 	.add("ramda", () => {
 		ramdaClone(bidRequest);
@@ -41,7 +41,33 @@ bench
 await bench.warmup();
 await bench.run();
 
-// formatting the results
+//  check if all of the libraries are working
+function testDeepCopy() {
+	const libraries = {
+		ramda: ramdaClone,
+		lodashCloneDeep: lodashCloneDeep,
+		cloneDeep: cloneDeep,
+		fastCopy: fastCopy,
+		nanoCopy: nanoCopy,
+		justClone: justClone,
+		klona: klona,
+		copyAnything: copyAnything,
+	};
+
+	for (const [name, func] of Object.entries(libraries)) {
+		const copy = func(bidRequest);
+		try {
+			assert.deepStrictEqual(copy, bidRequest);
+			console.log(`${name} deep copies properly.`);
+		} catch (error) {
+			console.log(`${name} does not deep copy properly.`);
+		}
+	}
+}
+
+testDeepCopy();
+
+// format the results
 const sortedTable = bench.table().sort((a, b) => {
 	if (
 		a &&
