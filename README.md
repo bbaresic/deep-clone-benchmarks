@@ -8,6 +8,8 @@ I use a nested object that mimics a Prebid bid.
 
 Currently Prebid uses a very outdated version of `just-clone`. I wanted to update it, but decided to check for other and better alternatives that are faster and maybe use less memory.
 
+I used the latest versions of the libraries.
+
 ## Prerequisites
 
 - Node
@@ -22,7 +24,7 @@ To get the same version that I am using, look into the `.prototools` file.
 2. `npm run start`
 
 
-## My results
+## My Results
 
 [Klona](https://github.com/lukeed/klona) has consistently been the best.
 
