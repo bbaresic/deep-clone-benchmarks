@@ -1,3 +1,4 @@
+import assert from "node:assert";
 import cloneDeep from "clone-deep";
 import { copy as copyAnything } from "copy-anything";
 import fastCopy from "fast-copy";
@@ -11,7 +12,6 @@ import nanoCopy from "nano-copy";
 import { clone as ramdaClone } from "ramda";
 import { Bench } from "tinybench";
 import { bidRequest } from "./bidRequest.js";
-import assert from "node:assert";
 
 const bench = new Bench({ time: 1000, iterations: 100 });
 bench
@@ -30,10 +30,10 @@ bench
 	.add("nanoCopy", () => {
 		nanoCopy(bidRequest);
 	})
-	.add("just-clone", () => {
+	.add("just-clone (v6)", () => {
 		justClone(bidRequest);
 	})
-	.add("just-clone current prebid version", () => {
+	.add("just-clone prebid version (v1)", () => {
 		justClonePrebid(bidRequest);
 	})
 	.add("klona (json)", () => {

@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "tsc && node dist/benchmark.js",
-		"lint": "biome check"
+		"lint": "biome check ."
 	},
 	"keywords": [],
 	"author": "",
