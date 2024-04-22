@@ -54,15 +54,20 @@ function testDeepCopy() {
 		copyAnything: copyAnything,
 	};
 
+	const results = [];
+
 	for (const [name, func] of Object.entries(libraries)) {
 		const copy = func(bidRequest);
 		try {
 			assert.deepStrictEqual(copy, bidRequest);
-			console.log(`${name} deep copies properly.`);
+			results.push({ Library: name, Result: "✅" });
 		} catch (error) {
-			console.log(`${name} does not deep copy properly.`);
+			results.push({ Library: name, Result: "❌" });
 		}
 	}
+
+	console.log("Deep copy is copying properly:");
+	console.table(results);
 }
 
 testDeepCopy();

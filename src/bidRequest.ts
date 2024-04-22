@@ -1,8 +1,8 @@
 import { faker } from "@faker-js/faker";
 
 function generateFakeData() {
-	const adUnits = Array.from({ length: 100 }, () => ({
-		bidder: faker.company.name,
+	return Array.from({ length: 100 }, () => ({
+		bidder: faker.company.name(),
 		params: {
 			organizationId: faker.number.int({ min: 1, max: 100 }).toString(),
 			placement: faker.string.alpha(10),
@@ -29,12 +29,6 @@ function generateFakeData() {
 		auctionId: faker.string.uuid(),
 		pageviewId: faker.string.uuid(),
 	}));
-
-	return {
-		data: {
-			adUnits,
-		},
-	};
 }
 
 export const bidRequest = generateFakeData();

@@ -24,7 +24,7 @@ To get the same version that I am using, look into the `.prototools` file.
 2. `npm run start`
 
 
-## My Results
+## My Results (MacBook Pro M2)
 
 [Klona](https://github.com/lukeed/klona) has consistently been the best.
 
