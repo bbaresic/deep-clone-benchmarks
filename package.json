@@ -19,6 +19,7 @@
 		"deep-copy": "^1.4.2",
 		"fast-copy": "^3.0.2",
 		"just-clone": "^6.2.0",
+		"just-clone-prebid": "npm:just-clone@^1.0.2",
 		"klona": "^2.0.6",
 		"lodash.clonedeep": "^4.5.0",
 		"nano-copy": "^0.1.0",

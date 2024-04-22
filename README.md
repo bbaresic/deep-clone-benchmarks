@@ -27,14 +27,17 @@ To get the same version that I am using, look into the `.prototools` file.
 ## My Results (MacBook Pro M2)
 
 [Klona](https://github.com/lukeed/klona) has consistently been the best.
+`just-clone current prebid version` is the version that prebid currently uses.
 
-| (index) | Task Name          | ops/sec | Average Time (ns)  | Margin   | Samples |
-|---------|--------------------|---------|--------------------|----------|---------|
-|    0    | 'klona (json)'     | '19,492'|  51302.83568460547| '±0.70%' |  19493  |
-|    1    | 'cloneDeep'        |  '7,110'| 140635.57142857212| '±3.18%' |   7112  |
-|    2    | 'nanoCopy'         |  '6,391'| 156462.48529411523| '±1.13%' |   6392  |
-|    3    | 'fastCopy'         |  '5,529'| 180841.78264013998| '±0.99%' |   5530  |
-|    4    | 'copyAnything'     |  '3,774'| 264919.6235761788 | '±0.58%' |   3775  |
-|    5    | 'lodash CloneDeep' |  '2,764'| 361753.05388788506| '±1.54%' |   2765  |
-|    6    | 'just-clone'       |  '2,272'| 440072.02243730053| '±4.32%' |   2273  |
-|    7    | 'ramda'            |    '381'| 2619699.1544502573| '±2.90%' |   382   |
+| (index) | Task Name                           | ops/sec | Average Time (ns)  | Margin   | Samples |
+|---------|-------------------------------------|---------|--------------------|----------|---------|
+|    0    | 'klona (json)'                      | '20,660'| 48402.30424471798 | '±0.25%' |  20661  |
+|    1    | 'cloneDeep'                         | '10,537'| 94900.40719301741 | '±0.23%' |  10538  |
+|    2    | 'nanoCopy'                          |  '7,018'| 142486.29505626977| '±0.34%' |   7019  |
+|    3    | 'fastCopy'                          |  '5,873'| 170254.3576779043 | '±0.34%' |   5874  |
+|    4    | 'copyAnything'                      |  '3,890'| 257029.08789516272| '±0.35%' |   3891  |
+|    5    | 'just-clone current prebid version' |  '3,856'| 259277.9375161922 | '±0.19%' |   3857  |
+|    6    | 'lodash CloneDeep'                  |  '3,298'| 303136.97575022804| '±0.33%' |   3299  |
+|    7    | 'just-clone'                        |  '2,947'| 339314.60786974087| '±0.23%' |   2948  |
+|    8    | 'ramda'                             |    '416'| 2403588.8273381316| '±0.25%' |    417  |
+

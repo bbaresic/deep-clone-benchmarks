@@ -2,6 +2,8 @@ import cloneDeep from "clone-deep";
 import { copy as copyAnything } from "copy-anything";
 import fastCopy from "fast-copy";
 import justClone from "just-clone";
+// @ts-ignore
+import justClonePrebid from "just-clone-prebid";
 import { klona } from "klona/json";
 import lodashCloneDeep from "lodash.clonedeep";
 // @ts-ignore
@@ -30,6 +32,9 @@ bench
 	})
 	.add("just-clone", () => {
 		justClone(bidRequest);
+	})
+	.add("just-clone current prebid version", () => {
+		justClonePrebid(bidRequest);
 	})
 	.add("klona (json)", () => {
 		klona(bidRequest);
