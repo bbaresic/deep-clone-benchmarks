@@ -1,4 +1,4 @@
-# Deep Clone Benchmark
+# Deep Clone Benchmarks
 
 This tries to benchmark different deep cloning libraries. This is a micro-benchmark, and that comes with caveats.
 
