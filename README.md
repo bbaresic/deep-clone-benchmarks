@@ -18,12 +18,12 @@ I used the latest versions of the libraries.
 I use [proto](https://moonrepo.dev/proto) to manage my Node/NPM versions.
 To get the same version that I am using, look into the `.prototools` file.
 
-## How to Run
+## How to Run in Node
 
 1. `npm i`
 2. `npm run start`
 
-### Run in browser
+### Run in Browser
 
 1. `npm run start-browser`
 2. Open the link that shows up in console, the default one is [one](http://localhost:5000)
