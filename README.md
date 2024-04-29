@@ -47,3 +47,7 @@ To get the same version that I am using, look into the `.prototools` file.
 | 8     | 'json-parse-stringify'           | '2,537'  | 394109.38297872065 | '±7.14%' | 2538    |
 | 9     | 'just-clone (v6)'                | '2,499'  | 400018.0847999996  | '±0.37%' | 2500    |
 | 10    | 'ramda'                          | '391'    | 2553004.711734691  | '±0.49%' | 392     |
+
+### Browser Results
+![image](https://github.com/bbaresic/deep-clone-benchmarks/assets/153560835/05922b81-59d0-4253-8b10-46d7bd27607d)
+
