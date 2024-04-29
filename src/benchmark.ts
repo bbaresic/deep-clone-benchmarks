@@ -41,6 +41,9 @@ bench
 	})
 	.add("copyAnything", () => {
 		copyAnything(bidRequest);
+	})
+	.add("json-parse-stringify", () => {
+		JSON.parse(JSON.stringify(bidRequest));
 	});
 
 await bench.warmup();
@@ -57,6 +60,7 @@ function testDeepCopy() {
 		justClone: justClone,
 		klona: klona,
 		copyAnything: copyAnything,
+		"json-parse-stringify": () => JSON.parse(JSON.stringify(bidRequest)),
 	};
 
 	const results = [];
