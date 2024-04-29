@@ -23,6 +23,11 @@ To get the same version that I am using, look into the `.prototools` file.
 1. `npm i`
 2. `npm run start`
 
+### Run in browser
+
+1. `npm run start-browser`
+2. Open the link that shows up in console, the default one is [one](http://localhost:5000)
+
 ## My Results (MacBook Pro M2)
 
 [Klona](https://github.com/lukeed/klona) has consistently been the best.
@@ -30,14 +35,15 @@ To get the same version that I am using, look into the `.prototools` file.
 `just-clone prebid version` is the version that prebid currently uses.
 
 | Index | Task Name                        | ops/sec  | Average Time (ns)  | Margin   | Samples |
-|-------|----------------------------------|----------|--------------------|----------|---------|
-| 0     | 'klona (json)'                   | '18,484' | 54098.02867188367  | '±0.35%' | 18485   |
-| 1     | 'cloneDeep'                      | '9,935'  | 100648.60175120902 | '±0.35%' | 9936    |
-| 2     | 'nanoCopy'                       | '6,409'  | 156021.21341654425 | '±0.44%' | 6410    |
-| 3     | 'fastCopy'                       | '5,342'  | 187172.9230769353  | '±0.48%' | 5343    |
-| 4     | 'just-clone prebid version (v1)' | '3,514'  | 284508.511237554   | '±0.27%' | 3515    |
-| 5     | 'copyAnything'                   | '3,473'  | 287915.14536556514 | '±0.35%' | 3474    |
-| 6     | 'json-parse-stringify'           | '3,030'  | 330029.9868030314  | '±0.21%' | 3031    |
-| 7     | 'lodash CloneDeep'               | '2,925'  | 341805.6298701318  | '±0.38%' | 2926    |
-| 8     | 'just-clone (v6)'                | '2,640'  | 378672.5918212722  | '±0.35%' | 2641    |
-| 9     | 'ramda'                          | '371'    | 2689549.1962365555 | '±0.36%' | 372     |
+| ----- | -------------------------------- | -------- | ------------------ | -------- | ------- |
+| 0     | 'klona (json)'                   | '18,876' | 52974.84801610396  | '±0.30%' | 18877   |
+| 1     | 'cloneDeep'                      | '9,449'  | 105822.30772486977 | '±0.30%' | 9450    |
+| 2     | 'nanoCopy'                       | '6,243'  | 160155.17277822155 | '±0.49%' | 6245    |
+| 3     | 'fastCopy'                       | '5,291'  | 188976.84297051746 | '±0.41%' | 5292    |
+| 4     | 'just-clone prebid version (v1)' | '3,455'  | 289361.6163194379  | '±0.28%' | 3456    |
+| 5     | 'copyAnything'                   | '3,064'  | 326358.4564437056  | '±0.40%' | 3065    |
+| 6     | 'structured-clone'               | '2,916'  | 342877.75934179034 | '±0.39%' | 2917    |
+| 7     | 'lodash CloneDeep'               | '2,879'  | 347232.26136757986 | '±0.42%' | 2881    |
+| 8     | 'json-parse-stringify'           | '2,537'  | 394109.38297872065 | '±7.14%' | 2538    |
+| 9     | 'just-clone (v6)'                | '2,499'  | 400018.0847999996  | '±0.37%' | 2500    |
+| 10    | 'ramda'                          | '391'    | 2553004.711734691  | '±0.49%' | 392     |
